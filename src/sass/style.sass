@@ -1,8 +1,14 @@
 *
     font-family: 'Museo Sans Cyrl-500', sans-serif
 .container
-    width: 1140px
-    margin: 0 auto
+    width: 940px
+    margin: 0 auto  
+    @media screen and ( max-width: 1200px )
+        width: 960px
+    @media screen and ( max-width: 991px )
+        width: 720px
+        
+        
 
 .btn
     width: 150px
@@ -14,7 +20,7 @@
     font-weight: 500
     text-transform: uppercase
     border: none
-    transition: 1s background-color
+    transition: 1s all
     &:hover
         background-color: #fff
         color: #c70101
@@ -24,15 +30,11 @@
     padding: 21px 0 0
     min-height: 650px
     background: url(../img/bg-girl.png) center/cover no-repeat
-    .logo
-        width: 260px
-        img
-            width: 100%
     .btn
         margin: 0 auto
     .wrap-header
         display: flex
-        justify-content: space-around
+        justify-content: space-between
         .oficial
             text-align: center
             .first-text
@@ -53,53 +55,55 @@
                 font-weight: 700
                 &:hover
                     text-decoration: none
-            
-    .title
-        margin: 91px 0 0 540px
-        color: #ffffff
-        font-size: 42px
-        font-weight: 700
-        text-transform: uppercase
-    .sub-title
-        margin: 0 0 0 540px
-        color: #ffffff
-        font-size: 24px
-        font-weight: 500
-        line-height: 15px
-        text-transform: uppercase
-    .adv
-        width: 430px
+    &-wraper
+        margin-top: 102px
         display: flex
-        justify-content: space-between
-        align-items: center
-        text-align: center
-        margin: 66px 0 0 597px
-        .text
-            margin-top: 20px
-            color: #fff
-            font-size: 14px
+        flex-direction: column
+        align-items: flex-end
+        .title
+            color: #ffffff
+            font-size: 40px
+            font-weight: 700
+            text-transform: uppercase
+        .sub-title
+            color: #ffffff
+            font-size: 23px
             font-weight: 500
-            padding: 0 21px
-        .mt
-            margin-top: 23px
-    .consult
-        width: 300px
-        margin: 68px 0 0 739px
-        .btn
+            line-height: 15px
+            text-transform: uppercase
+        .adv
+            width: 430px
+            display: flex
+            justify-content: space-between
+            align-items: center
+            text-align: center
+            margin: 66px 0 0 0
+            .text
+                margin-top: 20px
+                color: #fff
+                font-size: 14px
+                font-weight: 500
+                padding: 0 21px
+            .mt
+                margin-top: 23px
+        .consult
             width: 300px
-            height: 50px
-            font-size: 16px 
-        &-text
-            margin-top: 18px
-            text-align: right
-            color: #fff
-            font-size: 16px
-            font-weight: 500
-            .catalog
+            margin: 68px 0 0 0
+            .btn
+                width: 300px
+                height: 50px
+                font-size: 16px 
+            &-text
+                margin-top: 18px
+                text-align: right
                 color: #fff
                 font-size: 16px
                 font-weight: 500
-                text-decoration: underline
+                .catalog
+                    color: #fff
+                    font-size: 16px
+                    font-weight: 500
+                    text-decoration: underline
 .advantages
     min-height: 470px
     background-color: #f6f6f6
@@ -140,13 +144,40 @@
         font-size: 36px
         font-weight: 500
         text-transform: uppercase
-        margin: 0 0 0 102px
         line-height: 36px
     .offer
         color: #fff
-        margin: 77px 0 0 102px
+        margin-top: 77px
         font-size: 20px
         font-weight: 500
+    .form
+        display: flex
+        margin-top: 36px
+        flex-direction: column
+        width: 300px
+        input
+            margin-bottom: 15px
+            height: 50px
+            border-radius: 5px
+            background-color: #fff
+            border: none
+            padding: 0 20px
+            color: #4b4b4b
+            font-size: 14px
+            font-weight: 300
+        .btn
+            margin-top: 5px
+            color: #ffffff
+            height: 55px
+            width: 100%
+            font-size: 16px
+            &:hover
+                color: #c70101
+            
+                    
+
+
+    
         
 
             
