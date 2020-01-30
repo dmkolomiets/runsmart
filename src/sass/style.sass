@@ -24,6 +24,7 @@
     &:hover
         background-color: #fff
         color: #c70101
+        border: solid 1px #c70101
 
 .title
     color: #0d0d0d
@@ -225,7 +226,7 @@
         line-height: 48px 
         transform: skewX(-25deg)
         cursor: pointer
-        transition: .5s box-shadow, border
+        transition: .5s all
         &-active
             background-color: #c70101
             color: #ffffff
@@ -237,12 +238,20 @@
              transform: skewX(25deg)
     &-content
         margin-top: 59px
+        display: none
+        justify-content: space-between
+        flex-wrap: wrap
+        &-active
+            display: flex
     &-item
         padding: 20px 19px 27px 20px
         width: 300px
         min-height: 440px
         border: 2px solid #e8e8e8
         background-color: #ffffff
+        overflow: hidden
+        margin-bottom: 20px
+        
         &-img
             max-width: 100%
             height: 200px
@@ -293,8 +302,54 @@
                 color: #050505
                 font-size: 20px
                 font-weight: 700
+        &-wraper
+            display: flex
+            width: calc(200% + 40px)
+        &-content
+            width: 50%
+            margin-right: 0
+            transform: translateX(-100%)
+            transition: .5s all
+            &-active
+                transform: translateX(0%)
+                margin-right: 20px
 
-            
+        &-list
+            width: 50%
+            margin-left: 20px
+            transform: translateX(0%)
+            padding-right: 20px
+            transition: .5s all
+            padding-left: 19px
+            margin-bottom: 0
+            list-style-type: none
+            &-active
+                transform: translateX(-100%)
+                margin-left: 0
+            li
+                color: #555555
+                font-size: 14px
+                font-weight: 300
+                margin-bottom: 20px
+                position: relative
+                &::before
+                    content: ''
+                    position: absolute
+                    width: 5px
+                    height: 5px
+                    background-color: #c70101
+                    top: 8px  
+                    left: -14px
+            .link-back
+                position: absolute
+                bottom: 0
+                left: 50%
+                transform: translateX(calc(-50% - 19px))
+                color: #c70101
+                font-size: 14px
+                font-weight: 500
+                text-decoration: underline
+                text-transform: uppercase          
             
 
 

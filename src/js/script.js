@@ -14,4 +14,26 @@ $(document).ready(function(){
             },
         ]
       });
+//Табы
+    $('ul.catalog-tabs').on('click', 'li:not(.catalog-tab-active)', function() {
+    $(this)
+        .addClass('catalog-tab-active').siblings().removeClass('catalog-tab-active')
+        .closest('div.container').find('div.catalog-content').removeClass('catalog-content-active').eq($(this).index()).addClass('catalog-content-active');
+    });
+//Ссылки в карточке товаров
+    function toggleSlide (item) {
+        $(item).each(function(i) {
+            $(this).on('click', function(e) {
+                e.preventDefault();
+                $('.catalog-item-content').eq(i).toggleClass('catalog-item-content-active');
+                $('.catalog-item-list').eq(i).toggleClass('catalog-item-list-active');
+            })
+        });
+    };
+
+    toggleSlide ('.link-back');
+    toggleSlide ('.catalog-item-link');
+    
+
+
   });
