@@ -1,12 +1,13 @@
+
 *
     font-family: 'Museo Sans Cyrl-500', sans-serif
 .container
-    width: 940px
+    max-width: 940px
     margin: 0 auto  
     @media screen and ( max-width: 1200px )
-        width: 960px
+        max-width: 960px
     @media screen and ( max-width: 991px )
-        width: 720px
+        max-width: 720px
         
         
 
@@ -15,7 +16,7 @@
     height: 30px
     border-radius: 5px
     background-color: #c70101
-    color: #ffffff
+    color: #fff
     font-size: 12px
     font-weight: 500
     text-transform: uppercase
@@ -33,6 +34,37 @@
     text-align: center
     line-height: 30px
     text-transform: uppercase
+
+.form
+    display: flex
+    margin-top: 36px
+    flex-direction: column
+    width: 300px
+    .error
+        border: 1px solid red
+    label.error
+        color: #fff
+        text-align: center
+        border: none
+        margin-bottom: 10px
+    input
+        margin-bottom: 15px
+        height: 50px
+        border-radius: 5px
+        background-color: #fff
+        border: none
+        padding: 0 20px
+        color: #4b4b4b
+        font-size: 14px
+        font-weight: 300
+    .btn
+        margin-top: 5px
+        color: #fff
+        height: 55px
+        width: 100%
+        font-size: 16px
+        &:hover
+            color: #c70101
 
 
 .promo
@@ -70,13 +102,13 @@
         flex-direction: column
         align-items: flex-end
         .title
-            color: #ffffff
+            color: #fff
             font-size: 40px
             font-weight: 700
             text-transform: uppercase
         .sub-title
             margin-top: 17px
-            color: #ffffff
+            color: #fff
             font-size: 23px
             font-weight: 500
             line-height: 15px
@@ -87,7 +119,7 @@
             justify-content: space-between
             align-items: center
             text-align: center
-            margin: 66px 0 0 0
+            margin: 66px 0 0
             .text
                 margin-top: 20px
                 color: #fff
@@ -98,9 +130,9 @@
                 margin-top: 23px
         .consult
             width: 300px
-            margin: 68px 0 0 0
+            margin: 68px 0 0
             .btn
-                width: 300px
+                width: 100%
                 height: 50px
                 font-size: 16px 
             &-text
@@ -117,7 +149,7 @@
 .advantages
     min-height: 470px
     background-color: #f6f6f6
-    padding: 70px 0 78px 0
+    padding: 70px 0 78px
 
     .block
         margin-top: 65px
@@ -142,7 +174,7 @@
 .consultation
     min-height: 680px
     background: url("../img/bg-consultation.png") center/cover no-repeat
-    padding: 100px 0 92px 0
+    padding: 100px 0 92px
     &-title
         color: #fff
         font-size: 36px
@@ -154,29 +186,7 @@
         margin-top: 77px
         font-size: 20px
         font-weight: 500
-    .form
-        display: flex
-        margin-top: 36px
-        flex-direction: column
-        width: 300px
-        input
-            margin-bottom: 15px
-            height: 50px
-            border-radius: 5px
-            background-color: #fff
-            border: none
-            padding: 0 20px
-            color: #4b4b4b
-            font-size: 14px
-            font-weight: 300
-        .btn
-            margin-top: 5px
-            color: #ffffff
-            height: 55px
-            width: 100%
-            font-size: 16px
-            &:hover
-                color: #c70101
+    
 
 .carousel
     padding: 81px 0
@@ -204,7 +214,6 @@
             margin: 10px  0
             list-style: none
             text-align: center
-            font-size: 0  
 .catalog
     padding-bottom: 73px
     &-tabs
@@ -215,28 +224,37 @@
         margin-bottom: 0
     &-tab
         margin: 0 5px
+        position: relative
         text-align: center
         list-style-type: none
         width: 220px
         height: 50px
-        border: 2px solid #d0d0d0
         color: #6b6b6b
         font-size: 18px
         font-weight: 500
         text-transform: uppercase
         line-height: 48px 
-        transform: skewX(-25deg)
         cursor: pointer
-        transition: .5s all
+        &:after
+            content: ''
+            position: absolute
+            left: 0
+            top: 0
+            width: 100%
+            height: 100%
+            border: 2px solid #d0d0d0
+            transform: skewX(-25deg)
+            transition: .5s all
+            z-index: -1
         &-active
-            background-color: #c70101
-            color: #ffffff
-            border: none
+            color: #fff
+            &:after
+                background-color: #c70101
+                border: none
         &:hover
-            box-shadow: 3px 3px 20px #c70101
-            border: none
-        div
-             transform: skewX(25deg)
+            &:after
+                box-shadow: 3px 3px 20px #c70101
+                border: none
     &-content
         margin-top: 59px
         display: none
@@ -249,7 +267,7 @@
         width: 300px
         min-height: 440px
         border: 2px solid #e8e8e8
-        background-color: #ffffff
+        background-color: #fff
         overflow: hidden
         margin-bottom: 20px
         
@@ -328,7 +346,7 @@
                 transform: translateX(-100%)
                 margin-left: 0
             li
-                color: #555555
+                color: #555
                 font-size: 14px
                 font-weight: 300
                 margin-bottom: 20px
@@ -366,6 +384,9 @@
         justify-content: center
         align-items: start
         position: relative
+        &:last-child
+            &::after
+                content: none
         &::after 
             content: ''
             position: absolute
@@ -374,8 +395,6 @@
             width: 940px
             height: 1px
             background-color: #f6f6f6
-            &:last-child
-                height: 0
                 
                         
         .descr
@@ -415,7 +434,7 @@ footer
         .adress
             line-height: 20px
             text-align: center
-            color: #ffffff
+            color: #fff
             font-size: 20px
             font-weight: 500
         .phone
@@ -423,7 +442,7 @@ footer
             display: block
             margin-top: 36px
             text-align: center
-            color: #ffffff
+            color: #fff
             font-size: 20px
             font-weight: 700
             &:hover
@@ -434,7 +453,7 @@ footer
             margin-top: 38px
             &-icon
                 border-radius: 50%
-                border: 2px solid #ffffff
+                border: 2px solid #fff
                 width: 50px
                 height: 50px
                 display: flex
@@ -444,13 +463,71 @@ footer
                 transition: .5s all
                 &:hover
                     text-decoration: none
-                    -webkit-transform: rotateZ(360deg)
-                    -ms-transform: rotateZ(360deg)
                     transform: rotateZ(1080deg)
             
             .social-icon
                 color: #fff
                 font-size: 26px 
+
+.overlay
+    display: none
+    position: fixed
+    height: 100%
+    width: 100%
+    top: 0
+    background-color: rgba(0,0,0, .56)
+    .modal
+        text-align: center
+        margin: 0 auto
+        position: absolute
+        left: 50%
+        top: 50%
+        transform: translate(-50%, -50%)
+        width: 380px
+        min-height: 400px
+        background-color: #f2f2f2
+        padding: 38px 40px 40px 40px
+        .error
+            border: 1px solid red
+        label.error
+            text-align: center
+            border: none
+            margin-bottom: 10px
+        
+        &-subtitle
+            color: #0d0d0d
+            font-size: 18px
+            font-weight: 700
+        &-descr
+            line-height: 14px
+            margin-top: 11px
+            color: #0d0d0d
+            font-size: 14px
+            font-weight: 500
+        &-close
+            cursor: pointer
+            position: absolute
+            left: calc(100% + 20px)
+            top: 0
+            color: #c70101
+            font-size: 55px
+            line-height: 25px
+        
+        .form
+            margin: 0 auto
+            margin-top: 25px
+.overlay
+    .mini 
+        min-height: 140px
+        padding: 38px 76px 43px 82px
+        .modal-descr
+            line-height: 22px
+
+#consultation, #order, #thanks
+    display: none
+        
+
+
                     
                                
 

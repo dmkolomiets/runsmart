@@ -21,8 +21,8 @@
                     <div class="second-text">Garmin, Polar, Suunto</div>
                 </div>
                 <div class="contacts">
-                    <a href="tel:7499922-89-74" class="fone">+7 (499) 922-89-74</a>
-                    <button class="btn">заказать звонок</button>
+                    <a href="tel:74999228974" class="fone">+7 (499) 922-89-74</a>
+                    <button data-modal="consultation" class="btn">заказать звонок</button>
                 </div>
             </div>
             <div class="promo-wraper">
@@ -43,7 +43,7 @@
                     </div>
                 </div>
                 <div class="consult">
-                    <button class="btn">заказать кОНСУЛЬТАЦИЮ</button>
+                    <button data-modal="consultation" class="btn">заказать кОНСУЛЬТАЦИЮ</button>
                     <div class="consult-text">или <a href="#" class="catalog">ПЕРЕЙТИ В КАТАЛОГ</a></div>
                 </div>
             </div>
@@ -78,12 +78,12 @@
         <div class="container">
             <h2 class="consultation-title">Получите бесплатную консультацию <br>по подбору пульсометра </h2>
             <div class="offer">Просто заполните форму заявки <br>и мы перезвоним вам в течении 10 минут</div>
-            <form action="#" class="form">
+            <form action="#" class="form" id="consultation-form">
                 <input name="name" required placeholder="Ваше имя" type="text">
-                <input name="fone" required placeholder="Ваш телефон" type="number">
+                <input name="phone" required placeholder="Ваш телефон">
                 <input name="email" required placeholder="Ваш E-mail" type="email">
                 <!-- <input type="submit" value="заказать кОНСУЛЬТАЦИЮ"> -->
-                <button class="btn">заказать кОНСУЛЬТАЦИЮ</button c>
+                <button class="btn">заказать кОНСУЛЬТАЦИЮ</button>
             </form>
         </div>
     </section>
@@ -108,9 +108,9 @@
         <div class="container">
             <h2 class="title">Каталог пульсометров</h2>
             <ul class="catalog-tabs">
-                <li class="catalog-tab catalog-tab-active"><div>Для фитнеса</div></li>
-                <li class="catalog-tab"><div>для бега</div></li>
-                <li class="catalog-tab"><div>для триатлона</div></li>
+                <li class="catalog-tab catalog-tab-active">Для фитнеса</li>
+                <li class="catalog-tab">для бега</li>
+                <li class="catalog-tab">для триатлона</li>
             </ul>
 
             <div class="catalog-content catalog-content-active">
@@ -144,14 +144,14 @@
                             <div class="catalog-item-prices-del">4 750 руб.</div>
                             <div class="catalog-item-prices-actual">4 500 руб.</div>                            
                         </div>
-                    <button class="btn">КУПИТЬ</button>   
+                    <button class="btn buy">КУПИТЬ</button>   
                     </div>
                 </div>
                 <div class="catalog-item">
                     <div class="catalog-item-wraper">
                         <div class="catalog-item-content catalog-item-content-active">
                             <img src="img/item.png" alt="item" class="catalog-item-img">
-                            <div class="catalog-item-title">Пульсометр Polar FT1</div>
+                            <div class="catalog-item-title">Пульсометр Polar M2</div>
                             <div class="catalog-item-descr">Для первых шагов в тренировках, основанных на сердечном ритме</div>
                             <a href="#" class="catalog-item-link">ПОДРОБНЕЕ</a>
                         </div>
@@ -176,7 +176,40 @@
                             <div class="catalog-item-prices-del">4 750 руб.</div>
                             <div class="catalog-item-prices-actual">4 500 руб.</div>                            
                         </div>
-                    <button class="btn">КУПИТЬ</button>   
+                    <button class="btn buy">КУПИТЬ</button>   
+                    </div>
+                </div>
+
+                <div class="catalog-item">
+                    <div class="catalog-item-wraper">
+                        <div class="catalog-item-content catalog-item-content-active">
+                            <img src="img/item.png" alt="item" class="catalog-item-img">
+                            <div class="catalog-item-title">Пульсометр Polar FT12</div>
+                            <div class="catalog-item-descr">Для первых шагов в тренировках, основанных на сердечном ритме</div>
+                            <a href="#" class="catalog-item-link">ПОДРОБНЕЕ</a>
+                        </div>
+                        <ul class="catalog-item-list">
+                            <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;
+                            </li>
+                            <li>
+                                Вы увидите информативный графический индикатор целевых тренировочных зон пульса;
+                            </li>
+                            <li>
+                                Также Вы увидите информацию о расходе калорий за тренировку;
+                            </li>
+                            <li>
+                                Вы сможете посмотреть данные по 10 тренировкам.
+                            </li>
+                            <a href="#" class="link-back">назад</a>
+                        </ul>
+                   </div>
+                    <hr>
+                    <div class="catalog-item-footer">
+                        <div class="catalog-item-prices">
+                            <div class="catalog-item-prices-del">4 750 руб.</div>
+                            <div class="catalog-item-prices-actual">4 500 руб.</div>                            
+                        </div>
+                    <button class="btn buy">КУПИТЬ</button>   
                     </div>
                 </div>
 
@@ -209,7 +242,7 @@
                             <div class="catalog-item-prices-del">4 750 руб.</div>
                             <div class="catalog-item-prices-actual">4 500 руб.</div>                            
                         </div>
-                    <button class="btn">КУПИТЬ</button>   
+                    <button class="btn buy">КУПИТЬ</button>   
                     </div>
                 </div>
 
@@ -242,7 +275,7 @@
                             <div class="catalog-item-prices-del">4 750 руб.</div>
                             <div class="catalog-item-prices-actual">4 500 руб.</div>                            
                         </div>
-                    <button class="btn">КУПИТЬ</button>   
+                    <button class="btn buy">КУПИТЬ</button>   
                     </div>
                 </div>
 
@@ -275,40 +308,7 @@
                             <div class="catalog-item-prices-del">4 750 руб.</div>
                             <div class="catalog-item-prices-actual">4 500 руб.</div>                            
                         </div>
-                    <button class="btn">КУПИТЬ</button>   
-                    </div>
-                </div>
-
-                <div class="catalog-item">
-                    <div class="catalog-item-wraper">
-                        <div class="catalog-item-content catalog-item-content-active">
-                            <img src="img/item.png" alt="item" class="catalog-item-img">
-                            <div class="catalog-item-title">Пульсометр Polar FT1</div>
-                            <div class="catalog-item-descr">Для первых шагов в тренировках, основанных на сердечном ритме</div>
-                            <a href="#" class="catalog-item-link">ПОДРОБНЕЕ</a>
-                        </div>
-                        <ul class="catalog-item-list">
-                            <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;
-                            </li>
-                            <li>
-                                Вы увидите информативный графический индикатор целевых тренировочных зон пульса;
-                            </li>
-                            <li>
-                                Также Вы увидите информацию о расходе калорий за тренировку;
-                            </li>
-                            <li>
-                                Вы сможете посмотреть данные по 10 тренировкам.
-                            </li>
-                            <a href="#" class="link-back">назад</a>
-                        </ul>
-                   </div>
-                    <hr>
-                    <div class="catalog-item-footer">
-                        <div class="catalog-item-prices">
-                            <div class="catalog-item-prices-del">4 750 руб.</div>
-                            <div class="catalog-item-prices-actual">4 500 руб.</div>                            
-                        </div>
-                    <button class="btn">КУПИТЬ</button>   
+                    <button class="btn buy">КУПИТЬ</button>   
                     </div>
                 </div>
 
@@ -344,7 +344,7 @@
                             <div class="catalog-item-prices-del">4 750 руб.</div>
                             <div class="catalog-item-prices-actual">4 500 руб.</div>                            
                         </div>
-                    <button class="btn">КУПИТЬ</button>   
+                    <button class="btn buy">КУПИТЬ</button>   
                     </div>
                 </div>
 
@@ -379,7 +379,7 @@
                             <div class="catalog-item-prices-del">4 750 руб.</div>
                             <div class="catalog-item-prices-actual">4 500 руб.</div>                            
                         </div>
-                    <button class="btn">КУПИТЬ</button>   
+                    <button class="btn buy">КУПИТЬ</button>   
                     </div>
                 </div>
 
@@ -412,11 +412,11 @@
                             <div class="catalog-item-prices-del">4 750 руб.</div>
                             <div class="catalog-item-prices-actual">4 500 руб.</div>                            
                         </div>
-                    <button class="btn">КУПИТЬ</button>   
+                    <button class="btn buy">КУПИТЬ</button>   
                     </div>
                 </div>
             </div>
-        </div>
+        </для>
     </section>
 
     <section class="review">
@@ -462,11 +462,10 @@
     </section>
 
     <footer>
-        <!-- <div class="footer-map"></div> -->
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2244.4303074593545!2d37.64480731548954!3d55.768397998257086!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a636edcd2ad%3A0x4c2ca101e2c8c617!2z0JzRj9GB0L3QuNGG0LrQuNC5INC_0YAt0LQsIDQvMywg0JzQvtGB0LrQstCwLCDQoNC-0YHRgdC40Y8sIDEwNzA3OA!5e0!3m2!1sru!2sua!4v1580477426700!5m2!1sru!2sua" width="100%" height="630" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
         <div class="footer-inform">
             <address class="adress">Москва, Мясницкий проезд, д.3с1</address>
-            <a href="tel: 74999228974" class="phone">8 (499) 922-89-74</a>
+            <a href="tel:74999228974" class="phone">8 (499) 922-89-74</a>
             <div class="social">                
                 <a href="#" class="social-icon" title="facebook">
                     <i class="fab fa-facebook-f"></i>
@@ -479,12 +478,49 @@
                 </a>
             </div>
         </div>
-
     </footer>
+
+    <div class="overlay">
+        <div class="modal" id="consultation">
+            <div class="modal-close">&times;</div>
+            <div class="modal-subtitle">Просто заполните форму заявки</div>
+            <div class="modal-descr">и мы перезвоним вам в течении 10 минут</div>
+            <form action="#" class="form">
+                <input name="name" placeholder="Ваше имя" type="text">
+                <input name="phone" placeholder="Ваш телефон">
+                <input name="email" placeholder="Ваш E-mail" type="email">
+                <!-- <input type="submit" value="заказать кОНСУЛЬТАЦИЮ"> -->
+                <button class="btn">заказать кОНСУЛЬТАЦИЮ</button>
+            </form>
+        </div>
+
+        <div class="modal" id="order">
+            <div class="modal-close">&times;</div>
+            <div class="modal-subtitle">Ваш заказ:</div>
+            <div class="modal-descr">Пульсометр Polar FT1</div>
+            <form action="#" class="form">
+                <input name="name" required placeholder="Ваше имя" type="text">
+                <input name="phone" required placeholder="Ваш телефон">
+                <input name="email" required placeholder="Ваш E-mail" type="email">
+                <!-- <input type="submit" value="заказать кОНСУЛЬТАЦИЮ"> -->
+                <button class="btn">Купить</button>
+            </form>
+        </div>
+
+        <div class="modal mini" id="thanks">
+            <div class="modal-close">&times;</div>
+            <div class="modal-subtitle">Спасибо за вашу заявку!</div>
+            <div class="modal-descr">Наш менеджер свяжется с вами в ближайшее время!</div>
+        </div>
+        
+        
+    </div>
 
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="js/slick.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
