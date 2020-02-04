@@ -86,6 +86,8 @@ $(document).ready(function(){
 
     $('input[name=phone]').mask("+380 (99) 999-99-99");
 
+    //отправка формы с сайта
+
     $('form').submit(function(e){
         e.preventDefault(); //отключение перезагрузки страницы при отправке формы
         $.ajax({
@@ -93,13 +95,31 @@ $(document).ready(function(){
             url: "mailer/smart.php",
             data: $(this).serialize()
         }).done(function(){
-            $(this).find("input").val("")
-
+            $(this).find("input").val("");
+            $('#consultation, #order').fadeOut();
+            $('.overlay, #thanks').fadeIn('slow');
 
             $('form').trigger('reset');
         });
         return false;
     });
 
+    //Медленный скрол вверх страницы
+
+    $(window).scroll(function() {
+        if($(this).scrollTop() > 1600) {
+            $('.skrollup').fadeIn();
+        } else {
+            $('.skrollup').fadeOut();
+        }
+    });
+
+    $("a[href^='#']").click(function(){
+        var _href = $(this).attr("href");
+        $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
+        return false;
+    });
+
+    new WOW().init();
 
   });

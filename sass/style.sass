@@ -1,6 +1,8 @@
 
 *
     font-family: 'Museo Sans Cyrl-500', sans-serif
+body
+    position: relative
 .container
     max-width: 940px
     margin: 0 auto  
@@ -490,6 +492,7 @@ footer
         .error
             border: 1px solid red
         label.error
+            color: #c70101
             text-align: center
             border: none
             margin-bottom: 10px
@@ -525,7 +528,40 @@ footer
 
 #consultation, #order, #thanks
     display: none
+
+.skrollup
+    display: none
+    position: fixed
+    bottom: 40px
+    right: 40px     
+    .fas
+        font-size: 40px
+        color: #758edf
+        height: 40px
+        width: 40px
+        &:hover
+            animation-name: tada
+            animation-duration: 1s
+
+
+@keyframes hardbeat
+    form
+        transform: scale(1)
+    50%
+        transform: scale(1.4)
+    to
+       transform: scale(1) 
+
+.advantages
+    .animate
+        animation-name: hardbeat
+        animation-duration: 2s
+        animation-timing-function: ease
+        animation-iteration-count: infinite
         
+        
+         
+     
 
 
                     
