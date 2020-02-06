@@ -26,7 +26,7 @@ $(document).ready(function(){
             $(this).on('click', function(e) {
                 e.preventDefault();
                 $('.catalog-item-content').eq(i).toggleClass('catalog-item-content-active');
-                $('.catalog-item-list').eq(i).toggleClass('catalog-item-list-active');
+                $('.wraper-item').eq(i).toggleClass('wraper-item-active');
             })
         });
     };

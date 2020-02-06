@@ -1,3 +1,8 @@
+@import url('/css/bootstrap-reboot.min.css') 
+@import url('/css/animate.css') 
+@import url('/css/font.css')    
+@import url('/css/slick.css')   
+
 
 *
     font-family: 'Museo Sans Cyrl-500', sans-serif
@@ -5,12 +10,7 @@ body
     position: relative
 .container
     max-width: 940px
-    margin: 0 auto  
-    @media screen and ( max-width: 1200px )
-        max-width: 960px
-    @media screen and ( max-width: 991px )
-        max-width: 720px
-        
+    margin: 0 auto       
         
 
 .btn
@@ -72,7 +72,7 @@ body
 .promo
     padding: 21px 0 0
     min-height: 650px
-    background: url(../img/bg-girl.png) center/cover no-repeat
+    background: url(../img/bg-girl.jpg) center/cover no-repeat
     .btn
         margin: 0 auto
     .wrap-header
@@ -175,7 +175,7 @@ body
                     text-decoration: underline
 .consultation
     min-height: 680px
-    background: url("../img/bg-consultation.png") center/cover no-repeat
+    background: url("../img/bg-consultation.jpg") center/cover no-repeat
     padding: 100px 0 92px
     &-title
         color: #fff
@@ -212,10 +212,22 @@ body
         .slick-dots
             display: flex
             justify-content: center            
-            padding: 0
-            margin: 10px  0
-            list-style: none
-            text-align: center
+            margin: 0
+            padding: 2rem 0           
+            list-style-type: none
+            li
+                margin: 0 0.25rem
+            button
+                display: block
+                width: 1rem
+                height: 1rem
+                padding: 0			
+                border: none
+                border-radius: 100%
+                background-color: blue			
+                text-indent: -9999px
+            li.slick-active button 
+                background-color: red
 .catalog
     padding-bottom: 73px
     &-tabs
@@ -271,8 +283,7 @@ body
         border: 2px solid #e8e8e8
         background-color: #fff
         overflow: hidden
-        margin-bottom: 20px
-        
+        margin-bottom: 20px        
         &-img
             max-width: 100%
             height: 200px
@@ -334,33 +345,15 @@ body
             &-active
                 transform: translateX(0%)
                 margin-right: 20px
-
-        &-list
+        .wraper-item
             width: 50%
             margin-left: 20px
             transform: translateX(0%)
             padding-right: 20px
             transition: .5s all
-            padding-left: 19px
-            margin-bottom: 0
-            list-style-type: none
             &-active
                 transform: translateX(-100%)
                 margin-left: 0
-            li
-                color: #555
-                font-size: 14px
-                font-weight: 300
-                margin-bottom: 20px
-                position: relative
-                &::before
-                    content: ''
-                    position: absolute
-                    width: 5px
-                    height: 5px
-                    background-color: #c70101
-                    top: 8px  
-                    left: -14px
             .link-back
                 position: absolute
                 bottom: 0
@@ -370,13 +363,29 @@ body
                 font-size: 14px
                 font-weight: 500
                 text-decoration: underline
-                text-transform: uppercase 
+                text-transform: uppercase   
+            .catalog-item-list            
+                margin-bottom: 0
+                list-style-type: none
+                padding-left: 19px
+                             
+                li
+                    color: #555
+                    font-size: 14px
+                    font-weight: 300
+                    margin-bottom: 20px
+                    position: relative
+                    &::before
+                        content: ''
+                        position: absolute
+                        width: 5px
+                        height: 5px
+                        background-color: #c70101
+                        top: 8px  
+                        left: -14px
+             
 .review
     padding-bottom: 71px
-    hr 
-        border-bottom: none
-        background-color: #f6f6f6
-        margin: 40px 0
     .title
         margin-bottom: 70px
     &-item
@@ -394,7 +403,7 @@ body
             position: absolute
             left: 20px
             top: calc(100% + 50px)
-            width: 940px
+            width: 95%
             height: 1px
             background-color: #f6f6f6
                 
@@ -424,6 +433,10 @@ body
 footer
     height: 630px
     position: relative
+    iframe
+        height: 630px
+        width: 100%
+        border: none
     .footer-inform
         padding: 50px 68px 60px 69px
         position: absolute
@@ -558,6 +571,215 @@ footer
         animation-duration: 2s
         animation-timing-function: ease
         animation-iteration-count: infinite
+
+@media ( max-width: 1200px )
+    .container
+        width: 95%
+    .advantages
+        .block
+            .item
+                padding: 0 7px
+
+    .review
+        &-item
+            &::after 
+                content: none
+
+@media ( max-width: 991px  )   
+    .consultation
+        min-height: 600px
+        &-title
+            font-size: 29px
+        .offer
+            margin-top: 30px
+            font-size: 16px
+
+    .carousel
+        padding: 45px 0
+        .carousel-item
+            width: 85%
+            img
+                width: 100%
+    .catalog
+        padding-bottom: 40px
+        &-content
+            justify-content: space-around
+        &-tabs
+            margin-top: 30px
+    .title
+        font-size: 25px
+    
+    .review
+        &-item
+            margin-top: 30px
+    
+    footer
+        height: 430px
+        .footer-inform
+            width: 370px
+            height: 200px
+            padding: 15px 10px
+            .social
+                .social-icon
+                    font-size: 20px
+            .adress
+                font-size: 17px
+            .phone
+                font-size: 18px
+            .social-icon
+                width: 40px
+                height: 40px
+        iframe
+            height: 100%
+    .skrollup
+        bottom: 20px
+        right: 20px
+
+@media ( max-width: 767px  )
+    .promo
+        .wrap-header
+            .oficial
+                display: none
+        &-wraper
+            .title
+                font-size: 34px
+            .sub-title
+                font-size: 18px
+            .adv
+                margin-top: 47px
+    .consultation-title
+        font-size: 24px
+    .review-item 
+        .descr 
+            .feedback
+                font-size: 14px
+
+@media ( max-width: 575px  )
+    .promo 
+        min-height: 400px
+        .wrap-header
+            justify-content: center 
+            .contacts
+                display: none
+            img
+                width: 60%
+        &-wraper
+            margin-top: 80px
+            text-align: center
+            .title
+                font-size: 21px
+                margin: 0 auto
+            .sub-title
+                font-size: 12px
+                margin: 18px auto
+            .consult
+                &-text 
+                    text-align: center
+                    .catalog
+                        font-size: 14px
+                        
+                .btn
+                    width: 70%
+                    height: 38px
+                    font-size: 12px
+            .adv
+                display: none
+    .advantages
+        padding: 25px 0 10px 0
+        .title
+            font-size: 19px
+        .block
+            margin-top: 35px
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            .item
+                margin: 16px 0
+
+    
+    .consultation
+        min-height: 490px
+        padding: 25px 0 0 
+        &-title
+            text-align: center
+            font-size: 14px
+        .offer
+            text-align: center
+            font-size: 14px
+        .form
+            width: 250px
+            margin: 36px auto
+            .btn
+                height: 42px
+                font-size: 13px
+
+    .catalog
+        padding-bottom: 20px    
+        .title
+            font-size: 20px
+        &-tabs
+            flex-direction: column
+            align-items: center
+            
+            li 
+                margin-top: 10px
+                width: 195px
+                height: 38px
+                font-size: 17px
+                line-height: 42px
+
+    .review
+        .title
+            font-size: 19px
+            margin-bottom: 30px
+        &-item
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            &::after 
+                content: none
+            img
+                margin: 0 auto
+            .descr
+                text-align: center
+                margin-top: 10px
+
+    footer
+        .footer-inform
+            width: 100%
+
+    .form
+        width: 100%
+        
+        input
+            height: 35px
+        .btn
+            font-size: 12px
+            height: 35px
+
+    .overlay
+        .modal
+            width: 275px
+            padding: 25px
+            min-height: 125px
+        
+            .modal-close
+                left: calc(100% + -36px)
+                font-size: 40px
+                top: 10px
+            label.error
+                font-size: 14px
+        .mini 
+            min-height: 50px
+            padding: 50px 76px 43px 82px
+
+
+
+
+            
+            
+
+    
         
         
          
